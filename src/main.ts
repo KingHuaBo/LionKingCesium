@@ -17,13 +17,15 @@ global.scene.debugShowFramesPerSecond=true;
 // let url='/NORAD/elements/gp.php?GROUP=STATIONS&FORMAT=TLE';
 // let url='/NORAD/elements/gp.php?SPECIAL=gpz&FORMAT=TLE';
 // let url='/NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle';
-let url='/pub/TLE/catalog.txt';//20W
+// let url='/pub/TLE/catalog.txt';//20W
 // let url='/NORAD/elements/active.txt'; 
+// let url='data/catalog.json';//本地数据1
+// let url='data/gp.json';//本地数据2
+let url='data/starlink.json';//本地数据3
 fetch(url,{
     method:'GET',   
 })
 .then(res =>{
-    
     res.text().then(
         data=>{
             console.log(data);
@@ -38,5 +40,5 @@ fetch(url,{
             
         }
     );
-    
 });
+
